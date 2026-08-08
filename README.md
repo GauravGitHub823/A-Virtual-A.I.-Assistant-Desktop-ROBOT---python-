@@ -13,7 +13,7 @@ This output string is recognizing by this ROBOT  and perform all the necessary t
 
 <img width="1275" height="675" alt="image" src="https://github.com/user-attachments/assets/8ff5acba-ffe7-4d78-ae6d-0e0d6acdb4e5" />
 
-## Live GUI
+## Live GUI Dashboard
 <img width="1350" height="659" alt="image" src="https://github.com/user-attachments/assets/534cd019-9c57-49a6-a172-9d74460cec01" />
 
 ## Tasks Performed
