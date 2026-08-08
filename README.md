@@ -19,10 +19,14 @@ This output string is recognizing by this ROBOT  and perform all the necessary t
 ## Tasks Performed
 ### This project can perform many  task but I mention most important task as shown below:
 
-It can track location of any given phone number & also be able to give my location with Google Map
+It can track location of any given phone number & also be able to give my location with Google Map.
+
 It give weather reports of 3 days i.e. today, tomorrow, & day after tomorrow by their dates of any city name as in output terminal & also be able to open weather api maked by Python Tkinter to give temperature, pressure, humidity etc.
+
 It can open Driver Drowsiness project and detects status like Active, Drowsy & Sleeping of human eyes expression.
+
 It can open CORONA Virus Data Shower GUI App project to show Confirmed, Recovered & Death Cases.
+
 It can open NASA projects like:
 1. Space News of any dates with its image.
 2. Planet or any bodies information present in our Solar System like Mass, Gravity etc.
