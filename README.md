@@ -11,6 +11,7 @@ In Python there is an API called SpeechRecognition which allows us to the conver
 
 This output string is recognizing by this ROBOT  and perform all the necessary task execution definition like sendEmail(), Covid informtion, NASA information and many conditions in if condition like “open google”, “open Powershell”, “search on Wikipedia”, ”shows date, time, temperature, jokes” and “take screen shots” etc.
 
+<img width="1275" height="675" alt="image" src="https://github.com/user-attachments/assets/8ff5acba-ffe7-4d78-ae6d-0e0d6acdb4e5" />
 
 
 
