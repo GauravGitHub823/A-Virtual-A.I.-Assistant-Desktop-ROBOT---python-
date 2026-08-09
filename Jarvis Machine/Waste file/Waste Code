@@ -1,0 +1,307 @@
+
+# def Summary(Body):
+#
+#     list__ = ('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15')
+#
+#     value = random.choice(list__)
+#     path = "D:\\PYCHARM\\PycharmWorkspace\\Jarvis Machine\\Image\\Solar Images\\" + str(value) + ".jpg"
+#     os.startfile(path)
+#
+#     name = str(Body)
+#
+#     url = "https://hubblesite.org/api/v3/glossary/" + str(name)
+#
+#     r = requests.get(url)
+#
+#     Data = r.json()
+#
+#     if len(Data) != 0:
+#         retur = Data['definition']
+#         Speak(f"According to the Nasa: {retur}")
+#     else:
+#         Speak(f"No Data Available, try again later!")
+#
+# Summary("")
+
+
+
+
+# for bodyyy in bodies:
+#     print(bodyyy['id'],end=',')
+
+
+
+
+
+# elif 'website' in query:
+#     speak("Ok Sir, Launching...")
+#     query = query.replace("website","")
+#     query = query.replace(" ","")
+#     web = 'https://www.' + query + '.com'
+#     webbrowser.open(web)
+#     speak("Launched!")
+
+# elif 'launch website' in query:
+#     speak("Tell me the name of website")
+#     name = takeCommand()
+#     web = 'https://www.' + name + '.com'
+#     webbrowser.open(web)
+#     speak("done sir")
+
+
+
+def WhatsApp():
+    speak("Tell me the Phone Number!")
+    phone = int(takeCommand())
+    ph = '+91' + phone
+    speak("Tell me the message!")
+    msg = takeCommand()
+    speak("Tell me the time sir!")
+    speak("Time in Hour")
+    hour = int(takeCommand())
+    speak("Time in Minutes")
+    min = int(takeCommand())
+    pywhatkit.sendwhatmsg(ph,msg,hour,min,20)
+
+elif 'whatsapp message' in query:
+    WhatsApp()
+
+
+
+
+elif "about" in query:
+    from NASA import Summary
+    query = query.replace("about ","")
+    Summary(query)
+
+
+
+
+elif 'play music' in query:
+    music_dir = 'D:\\VISUAL CODE STUDIO\\VSCodeWorkspace\\M.Sc. CSA Projects\\Jarvis\\brock.mpeg'
+    songs = os.listdir(music_dir)
+    print(songs)
+    os.startfile(os.path.join(music_dir, songs[0]))
+
+
+
+tz_IN = pytz.timezone('Asia/Kolkata')
+
+   datetime_IN = datetime.now(tz_IN)
+
+   print("Current time in India is :", datetime_IN.strftime("%H:%M:%S"))
+
+
+
+
+
+
+
+
+
+
+
+
+# def Reader():
+    # speak("Tell me the name of book!")
+    # name = takeCommand()
+
+    # if 'bhu' in name:
+    # os.startfile("D:\\PYCHARM\\PycharmWorkspace\\Jarvis Machine\\BHU.pdf")
+    # book = open("D:\\PYCHARM\\PycharmWorkspace\\Jarvis Machine\\BHU.pdf", "rb")
+    # pdfreader = PyPDF2.PdfFileReader(book)
+    # pages = pdfreader.getNumPages()
+    # speak(f"Number of the pages in this book are {pages}")
+    # speak(f"from which page I have to start reading?")
+    # numPage = int(input("enter the page number: "))
+    # page = pdfreader.getPage(numPage)
+    # text = page.extractText()
+    # speak("In which language I have to read?")
+    # lang = takeCommand()
+    #
+    # if 'hindi' in lang:
+    #     transl = Translator()
+    #     textHin = transl.translate(text, 'hi')
+    #     textm = textHin.text
+    #     speech = gTTS(text=textm)
+    #     try:
+    #         speech.save('book.mp3')
+    #         playsound('book.mp3')
+    #     except:
+    #         playsound('book.mp3')
+    # else:
+    #     speak(text)
+
+
+
+
+def Reader():
+    speak("Tell me the name of book!")
+    name = takeCommand()
+
+    #if 'bhu' in name:
+    os.startfile("D:\\PYCHARM\\PycharmWorkspace\\Jarvis Machine\\ExecutiveSummary.pdf")
+    book = open("D:\\PYCHARM\\PycharmWorkspace\\Jarvis Machine\\ExecutiveSummary.pdf", "rb")
+    pdfreader = PyPDF2.PdfFileReader(book)
+    pages = pdfreader.getNumPages()
+    speak(f"Number of the pages in this book are {pages}")
+    speak(f"from which page I have to start reading?")
+    numPage = int(input("enter the page number: "))
+    page = pdfreader.getPage(numPage)
+    text = page.extractText()
+    speak("In which language I have to read?")
+    lang = takeCommand()
+
+    if 'hindi' in lang:
+        transl = Translator()
+        textHin = transl.translate(text, 'hi')
+        textm = textHin.text
+        speech = gTTS(text=textm)
+        try:
+            speech.save('book.mp3')
+            playsound('book.mp3')
+        except:
+            playsound('book.mp3')
+    else:
+        speak(text)
+
+
+
+
+
+elif "read pdf" in query or "read a pdf file" in query:
+            book = open("BHU.pdf", "rb")
+            pdfReader = PyPDF2.PdfFileReader(book)
+            pages = pdfReader.numPages
+            speak(f"Total pages in this book are {pages}")
+            speak("Please tell me the page number")
+            page_number = int(input("Page Number : "))
+            page = pdfReader.getPage(page_number)
+            text = page.extractText()
+            speak(text)
+
+
+
+
+
+    # Speak("Extract data for those asteroids are listed below.")
+    #
+    # for body in neo[start_date]:
+    #
+    #     id = body['id']
+    #     name = body['name']
+    #     absolute = body['absolute_magnitude_h']
+    #     print(id,name,absolute)
+
+
+
+
+# print(f"TimeStamp : {dt}")
+# print(f"Latitude : {lat}")
+# print(f"Longitude : {lon}")
+# print(f"Message : {mess}")
+
+
+
+
+
+def CoronaVirus(Country):
+
+    countries = str(Country).replace(" ","")
+    url = f"https://www.worldmeters.info/coronavirus/country/{countries}/"
+    result = requests.get(url)
+    soups = bs4.BeautifulSoup(result.text,'lxml')
+    corona = soups.find_all('div', class_ = 'maincounter-number')
+    Data = []
+
+    for case in corona:
+        span = case.find('span')
+        Data.append(span.string)
+
+    Cases, Death, Recovered = Data
+    return Cases,Death,Recovered
+
+kk = CoronaVirus("North Korea")
+
+
+
+
+
+
+###################################################################################
+
+from geopy.distance import great_circle
+from geopy.geocoders import Nominatim
+
+def Google_Maps(Place):
+
+    Url_Place = "https://www.google.com/maps/place/" + str(Place)
+    webbrowser.open(url=Url_Place)
+
+    geolocator = Nominatim(user_agent="myGeocoder")
+    location = geolocator.geocode(Place, addressdetails=True)
+    target_latlon = location.latitude, location.longitude
+    location = location.raw['address']
+
+    target = {'City': location.get('city',''),
+              'State': location.get('state',''),
+              'Country': location.get('country','')}
+
+    current_locate = geocoder.ip('me')
+    current_latlon = current_locate.latlng
+
+    distance = str(great_circle(current_latlon,target_latlon))
+    distance = str(distance.split(' ',1)[0])
+    distance = round(float(distance),2)
+
+    speak(target)
+    speak(f"Sir, {Place} is {distance} km away from your location")
+
+
+ elif "where is" in query:
+    Place = query.replace("where is","")
+    Place = query.replace("please","")
+    Place = query.replace("tell me","")
+    Google_Maps(Place)
+
+################################################################################
+
+import matplotlib.pyplot as plt
+import cartopy.crs as ccrs
+
+def IssTracker():
+
+    try:
+        url = "http://api.open-notify.org/iss-now.json"
+
+        r = requests.get(url)
+
+        Data = r.json()
+
+        dt = Data['timestamp']
+
+        lat = Data['iss_position']['latitude']
+
+        lon = Data['iss_position']['longitude']
+
+        mess = Data['message']
+
+        df = pd.read_json(url)
+        df['latitude'] = df.loc['latitude', 'iss_position']
+        df['longitude'] = df.loc['longitude', 'iss_position']
+        df.reset_index(inplace=True)
+        print(df)
+
+        plt.figure(figsize=(10,8))
+
+        ax = plt.axes(projection = ccrs.PlateCarree())
+
+        ax.stock_img()
+
+        plt.scatter(float(lon),float(lat), color='red', marker='o')
+
+        plt.show()
+    except:
+        Speak("I am not be able to fulfil your request ")
+        print("I am not be able to fulfil your request ")
+

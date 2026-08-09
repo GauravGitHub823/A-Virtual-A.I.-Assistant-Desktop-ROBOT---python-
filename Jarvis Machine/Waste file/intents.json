@@ -1,0 +1,65 @@
+{
+  "intents" : [
+
+
+    {
+        "tag": "greetings",
+        "patterns":["hello","hi","hii","hey","wake up","are you here","are you hear me","are you present",
+                    "hai","wake","here","hear","present"
+        ],
+        "responses":["Hello Sir","How are you Sir","Yes Sir","May I help you Sir","Always for you Sir",
+                    "Always for your service Sir","Here is your Assistance Sir","I am here Sir"
+        ]
+    },
+
+    {
+      "tag": "bye",
+        "patterns":["bye","goodbye","see you later","see you again","see you"
+        ],
+        "responses":["Bye Sir","Goodbye Sir","Have a good day Sir","I am going Sir","Ok Sir",
+                    "Nice to meet you Sir","Nice to meet you again Sir","See you again Sir",
+                    "Thanks for giving me the chance to help you sir"
+        ]
+    },
+
+    {
+      "tag": "health",
+        "patterns":["how are you","are you fine","are you feeling good","fine","feeling","ok","alright",
+                    "are you ok","are you alright","are you"
+        ],
+        "responses":["Fine Sir","Perfect Sir","I am fine Sir","Feeling good Sir","Cool Sir",
+                    "Feel good Sir","I am Ok Sir"
+        ]
+    },
+
+    {
+      "tag": "happy",
+        "patterns":["good job","good performance","excellent","great","fantastic","good","like",
+                    "you works well","i like your performance","hats up","best","very good"
+        ],
+        "responses":["Thank you Sir","Its my pleasure Sir","Thanks Sir", "Thanking you Sir"
+        ]
+    },
+
+    {
+      "tag": "angry",
+        "patterns":["do well","do it well","doing well","not do well","not doing well","poor","bad job",
+                    "bad performance","i don't like you performance","bad","not","worst","very bad"
+        ],
+        "responses":["Sorry Sir","Next time I give better performance Sir","I am try to give my best Sir",
+                     "System not working Sir","I am really sorry Sir","I try to do well Sir",
+                     "Next time I do it well Sir","I give good job next time Sir"
+        ]
+    },
+
+    {
+      "tag": "thank",
+        "patterns":["thank","thanks","thank you","thanking you","thanking","I am thanking for you"
+        ],
+        "responses":["Welcome Sir","You most welcome Sir","Its my pleasure","Its my pleasure Sir"
+        ]
+    }
+
+
+  ]
+}
